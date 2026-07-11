@@ -3,6 +3,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const pinoHttp = require('pino-http');
 const logger = require('./utils/logger');
+const errorMiddleware = require('./middlewares/error.middleware');
 
 const app = express();
 
@@ -12,6 +13,7 @@ app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(errorMiddleware)
 
 // * REQUEST LOGGING - logs every incoming request
 app.use(pinoHttp({ logger }));
