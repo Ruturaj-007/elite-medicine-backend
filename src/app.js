@@ -6,6 +6,8 @@ const logger = require('./utils/logger');
 const errorMiddleware = require('./middlewares/error.middleware');
 const authRoutes = require('./routes/auth.routes');
 const doctorRoutes = require('./routes/doctor.routes');
+const bookingRoutes = require('./routes/booking.routes');
+
 
 const app = express();
 
@@ -21,6 +23,7 @@ app.get('/health', (req, res) => {
 
 app.use('/api/auth', authRoutes);
 app.use('/api/doctors', doctorRoutes);
+app.use('/api/appointments', bookingRoutes);
 
 app.use(errorMiddleware); // ALWAYS LAST — every future route goes ABOVE this line
 
