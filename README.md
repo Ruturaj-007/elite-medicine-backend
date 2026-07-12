@@ -2,6 +2,11 @@
 
 Node.js/Express/Prisma/PostgreSQL backend for a telemedicine platform.
 
+## Live Deployment
+https://healthcare-backend-0w8j.onrender.com
+
+Note: free tier spins down after inactivity — first request may take 30-50s to respond.
+
 ## Tech Stack
 Node.js, Express 5, PostgreSQL (Neon), Prisma 7, JWT Auth, Zod validation, Pino logging, bcrypt
 
